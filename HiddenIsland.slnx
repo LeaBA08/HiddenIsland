@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="HiddenIsland.Core/HiddenIsland.Core.csproj" />
+  <Project Path="HiddenIsland.Web/HiddenIsland.Web.csproj" />
+</Solution>
