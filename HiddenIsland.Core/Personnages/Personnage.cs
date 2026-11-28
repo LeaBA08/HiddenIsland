@@ -32,4 +32,14 @@ public abstract class Personnage
     {
         cible.RecevoirDegats(ForceAttaque - cible.ForceDefense);
     }
+
+    public void Soigner(int points)
+    {
+        if (!EstVivant || points < 0)
+        {
+            return;
+        }
+
+        PointsDeVie = Math.Min(PointsDeVieMax, PointsDeVie + points);
+    }
 }
