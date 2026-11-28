@@ -30,6 +30,20 @@ public abstract class Personnage
 
     public virtual void Attaquer(Personnage cible)
     {
+        if (!EstVivant || !cible.EstVivant)
+        {
+            return;
+        }
         cible.RecevoirDegats(ForceAttaque - cible.ForceDefense);
+    }
+
+    public void Soigner(int points)
+    {
+        if (!EstVivant || points < 0)
+        {
+            return;
+        }
+
+        PointsDeVie = Math.Min(PointsDeVieMax, PointsDeVie + points);
     }
 }
