@@ -30,6 +30,10 @@ public abstract class Personnage
 
     public virtual void Attaquer(Personnage cible)
     {
+        if (!EstVivant || !cible.EstVivant)
+        {
+            return;
+        }
         cible.RecevoirDegats(ForceAttaque - cible.ForceDefense);
     }
 
